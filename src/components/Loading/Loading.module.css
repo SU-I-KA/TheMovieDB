@@ -1,0 +1,88 @@
+/* Spinner Bars */
+
+.sp {
+  width: 32px;
+  height: 32px;
+  clear: both;
+  margin: 20px auto;
+}
+
+.spBars {
+  position: relative;
+  width: 10px;
+  border: 1px #262626 solid;
+  background-color: #fff;
+  -webkit-animation: spBars 1s infinite linear;
+  animation: spBars 1s infinite linear;
+}
+.spBars:after,
+.spBars:before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border: inherit;
+  background-color: inherit;
+  top: -1px;
+}
+.spBars:before {
+  left: -20px;
+  -webkit-animation: spBarsBefore 1s infinite linear;
+  animation: spBarsBefore 1s infinite linear;
+}
+.spBars:after {
+  right: -20px;
+  -webkit-animation: spBarsAfter 1s infinite linear;
+  animation: spBarsAfter 1s infinite linear;
+}
+@keyframes spBarsBefore {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1.25);
+  }
+  50% {
+    transform: scale(1, 0.75);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes spBars {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 1.25);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes spBarsAfter {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 0.75);
+  }
+  75% {
+    transform: scale(1, 1.25);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}

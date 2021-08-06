@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+.header {
+  padding: 5rem 0 0 0;
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.row {
+  text-align: center;
+  position: sticky;
+  top: 0;
+  position: -webkit-sticky;
+  background-color: #000;
+  z-index: 50;
+  padding: 0 8px;
+  padding-bottom: 32px;
+}
+
+.text {
+  display: inline-block;
+}
+
+.logo {
+  width: 74px;
+  margin-right: 32px;
+}
+
+.title {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 44px;
+  margin-bottom: 0;
+  transition: all 0.4s linear;
+}
+.subTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 0;
+  transition: all 0.4s linear;
+}
+
+.title h2::first-letter,
+.subTitle p::first-letter {
+  text-transform: capitalize;
+}
+
+.movies {
+  padding: 32px 0;
+  background-color: #181818;
+  /* min-height: 50vw; */
+}
+.moviesCenter {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  gap: 2rem;
+  transition: all 0.4s linear;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 576px) {
+  .moviesCenter {
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  }
+}
+
+@media screen and (max-width: 566px) {
+  .header {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+  }
+  .subTitle {
+    font-size: 18px;
+  }
+}
